@@ -52,14 +52,14 @@
 
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>sonar-maven-plugin</artifactId>
-				<version>2.7.1</version>
+				<artifactId>Sonar-maven-plugin</artifactId>
+				<version>2.6</version>
 			</plugin>
 
 			<plugin>
 				<groupId>com.github.sgoertzen</groupId>
-				<artifactId>sonarbreak</artifactId>
-				<version>1.2.2</version>
+				<artifactId>sonar-break-maven-plugin</artifactId>
+				<version>1.2.5</version>
 				<configuration>
 					<sonarServer>https://sonarcloud.io</sonarServer>
 				</configuration>
@@ -69,15 +69,15 @@
 				<groupId>org.jacoco</groupId>
 				<artifactId>jacoco-maven-plugin</artifactId>
 				<configuration>
-                    <excludes>
+					<excludes>
 						<exclude>
 							**/*com/trademehere/movies/MoviesApplication.class
 						</exclude>
 						<exclude>
 							**/*com/trademehere/movies/dto/model/**
 						</exclude>
-						</excludes>
-						</configuration>
+					</excludes>
+				</configuration>
 				<version>0.8.5</version>
 				<executions>
 					<execution>
