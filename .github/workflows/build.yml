@@ -34,10 +34,4 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         run: mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar
-      - name: Sonar Build Breaker
-        uses: jkumar19/sonar-build-breaker@v1.0.0
-        with:
-          sonar_url: "https://sonarcloud.io"
-          sonar_branch: "main"
-          sonar_token: ${{ secrets.SONAR_TOKEN }}
-          project_key: "marcialrivas_ms-spring-boot-movies"
+        run: java -jar sonar-gate-breaker-all-1.0.1.jar -u $SONAR_TOKEN
