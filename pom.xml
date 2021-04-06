@@ -56,10 +56,10 @@
 				<configuration>
                     <excludes>
 						<exclude>
-							**/*com/trademehere/movies/MoviesApplication.*
+							com/trademehere/movies/*
 						</exclude>
 						<exclude>
-							**/*com/trademehere/movies/dto/model/**
+							com/trademehere/movies/dto/model/*
 						</exclude>
 						</excludes>
 						</configuration>
