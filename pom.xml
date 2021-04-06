@@ -56,10 +56,10 @@
 				<configuration>
                     <excludes>
 						<exclude>
-							com/trademehere/movies/*
+							**/*com/trademehere/movies/MoviesApplication.java
 						</exclude>
 						<exclude>
-							com/trademehere/movies/dto/model/*
+							**/*com/trademehere/movies/dto/model/**
 						</exclude>
 						</excludes>
 						</configuration>
