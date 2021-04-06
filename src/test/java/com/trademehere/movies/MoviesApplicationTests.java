@@ -15,7 +15,7 @@ public class MoviesApplicationTests {
 	private HelloWorldController helloWorldController;
 
 	@Test
-	public void contextLoads() {
+	protected void contextLoads() {
         assertThat(helloWorldController).isNotNull();
 	}
 
