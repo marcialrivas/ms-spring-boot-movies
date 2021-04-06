@@ -21,8 +21,15 @@ class HelloWorldControllerTest {
   MockMvc mockMvc;
 
   @Test
-  void shouldReturnDefaultMessage() throws Exception {
+  void shouldReturnOkResponse() throws Exception {
     this.mockMvc.perform(get("/api/hello-world/ok")).andDo(print()).andExpect(status().isOk())
         .andExpect(content().string(containsString("World")));
   }
+
+  @Test
+  void shouldReturnNotFound() throws Exception {
+    this.mockMvc.perform(get("/api/hello-world/not-found")).andDo(print()).andExpect(status().isNotFound())
+        .andExpect(content().string(containsString("World")));
+  }
+
 }
