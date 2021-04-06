@@ -46,17 +46,39 @@
 			<scope>test</scope>
 		</dependency>
 
+			<dependency>
+				<groupId>com.github.sgoertzen</groupId>
+				<artifactId>sonarbreak</artifactId>
+				<version>1.2.2</version>
+			</dependency>
+
 	</dependencies>
 
 	<build>
 		<plugins>
+
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>sonar-maven-plugin</artifactId>
+				<version>2.7.1</version>
+			</plugin>
+
+			<plugin>
+				<groupId>com.github.sgoertzen</groupId>
+				<artifactId>sonarbreak</artifactId>
+				<version>1.2.2</version>
+				<configuration>
+					<sonarServer>https://sonarcloud.io</sonarServer>
+				</configuration>
+			</plugin>
+
 			<plugin>
 				<groupId>org.jacoco</groupId>
 				<artifactId>jacoco-maven-plugin</artifactId>
 				<configuration>
                     <excludes>
 						<exclude>
-							**/*com/trademehere/movies/MoviesApplication.java
+							**/*com/trademehere/movies/MoviesApplication.class
 						</exclude>
 						<exclude>
 							**/*com/trademehere/movies/dto/model/**
