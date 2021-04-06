@@ -53,6 +53,16 @@
 			<plugin>
 				<groupId>org.jacoco</groupId>
 				<artifactId>jacoco-maven-plugin</artifactId>
+				<configuration>
+                    <excludes>
+						<exclude>
+							**/*com/trademehere/movies/MoviesApplication.class
+						</exclude>
+						<exclude>
+							**/*com/trademehere/movies/dto/model/**
+						</exclude>
+						</excludes>
+						</configuration>
 				<version>0.8.5</version>
 				<executions>
 					<execution>
