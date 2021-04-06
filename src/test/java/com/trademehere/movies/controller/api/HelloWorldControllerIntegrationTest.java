@@ -15,13 +15,13 @@ import org.springframework.test.web.servlet.MockMvc;
 
 @SpringBootTest
 @AutoConfigureMockMvc
-public class HelloWorldControllerIntegrationTest {
+class HelloWorldControllerIntegrationTest {
 
   @Autowired
-  private MockMvc mockMvc;
+  MockMvc mockMvc;
 
   @Test
-  protected void shouldReturnDefaultMessage() throws Exception {
+  void shouldReturnDefaultMessage() throws Exception {
     this.mockMvc.perform(get("/api/hello-world/ok")).andDo(print()).andExpect(status().isOk())
         .andExpect(content().string(containsString("World")));
   }

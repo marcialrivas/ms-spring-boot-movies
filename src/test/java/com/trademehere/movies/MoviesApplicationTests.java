@@ -9,13 +9,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-public class MoviesApplicationTests {
+class MoviesApplicationTests {
 
     @Autowired
-	private HelloWorldController helloWorldController;
+	HelloWorldController helloWorldController;
 
 	@Test
-	protected void contextLoads() {
+	void contextLoads() {
         assertThat(helloWorldController).isNotNull();
 	}
 
