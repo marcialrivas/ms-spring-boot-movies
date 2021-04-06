@@ -56,7 +56,7 @@
 				<configuration>
                     <excludes>
 						<exclude>
-							**/*com/trademehere/movies/MoviesApplication.class
+							**/*com/trademehere/movies/MoviesApplication.*
 						</exclude>
 						<exclude>
 							**/*com/trademehere/movies/dto/model/**
