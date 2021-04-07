@@ -36,13 +36,11 @@ jobs:
         run: |
            mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar
            java -jar sonar-gate-breaker-all-1.0.1.jar -u $SONAR_TOKEN
-      - name: Set current date as env variable
-        run: echo "NOW::$(date +'%Y%m%dT%H_%M_%S')" >> $GITHUB_ENV
       - name: Build & push Docker image
         uses: mr-smithers-excellent/docker-build-push@v3
         with:
           image: mrivas/ms-spring-boot-movies
-          tags: $NOW._.${GITHUB_SHA::6}
+          tags: $(date +'%Y%m%d_%H_%M_%S')._.${GITHUB_SHA::6}
           registry: docker.io
           dockerfile: Dockerfile
           username: ${{ secrets.DOCKER_USERNAME }}
