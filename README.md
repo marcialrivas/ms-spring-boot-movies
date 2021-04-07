@@ -5,4 +5,5 @@ Spring Boot microservices for movies
 
 ### 2021/04/05 0.0.1
 
-* add version management in build gitflow 
+* feat: add docker build and publish process
+* refactor: bump pom version
