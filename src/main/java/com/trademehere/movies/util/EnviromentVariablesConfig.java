@@ -4,9 +4,15 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class EnviromentVariablesConfig {
+	
+	
+
+	private EnviromentVariablesConfig() {
+
+	}
 
 	public static Map<String, String> getElasctiAMPConfing(){
-		HashMap<String, String> configuration = new HashMap<String, String>();
+		HashMap<String, String> configuration = new HashMap<>();
 		configuration.put("service_name", System.getenv("ELASTIC_APM_SERVICE_NAME"));
 		configuration.put("server_urls", System.getenv("ELASTIC_APM_SERVERS_URL"));
 		configuration.put("secret_token", System.getenv("ELASTIC_APM_SECRET_TOKEN"));
