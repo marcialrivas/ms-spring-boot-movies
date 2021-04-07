@@ -40,7 +40,7 @@ jobs:
         uses: mr-smithers-excellent/docker-build-push@v3
         with:
           image: mrivas/ms-spring-boot-movies
-          tags: $(date +'%Y%m%d_%H_%M_%S')._.${GITHUB_SHA::6}
+          tag: $(date +'%Y%m%d_%H_%M_%S')._.${GITHUB_SHA::6}
           registry: docker.io
           dockerfile: Dockerfile
           username: ${{ secrets.DOCKER_USERNAME }}
