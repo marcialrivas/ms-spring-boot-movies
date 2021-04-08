@@ -18,12 +18,12 @@ class EnviromentVariablesConfigTest {
 
 	@Test
 	void testGetElasctiAMPConfing() {
-		assertEquals(EnviromentVariablesConfig.getElasctiAMPConfing().get("service_name"),"");
-		assertEquals(EnviromentVariablesConfig.getElasctiAMPConfing().get("server_urls"),"");
-		assertEquals(EnviromentVariablesConfig.getElasctiAMPConfing().get("secret_token"),"");
-		assertEquals(EnviromentVariablesConfig.getElasctiAMPConfing().get("environment"),"");
-		assertEquals(EnviromentVariablesConfig.getElasctiAMPConfing().get("enable_log_correlation"),"true");
-		assertEquals(EnviromentVariablesConfig.getElasctiAMPConfing().get("application_packages"),"com.trademehere.movies");
+		assertEquals("",EnviromentVariablesConfig.getElasctiAMPConfing().get("service_name"));
+		assertEquals("",EnviromentVariablesConfig.getElasctiAMPConfing().get("server_urls"));
+		assertEquals("",EnviromentVariablesConfig.getElasctiAMPConfing().get("secret_token"));
+		assertEquals("",EnviromentVariablesConfig.getElasctiAMPConfing().get("environment"));
+		assertEquals("true",EnviromentVariablesConfig.getElasctiAMPConfing().get("enable_log_correlation"));
+		assertEquals("com.trademehere.movies",EnviromentVariablesConfig.getElasctiAMPConfing().get("application_packages"));
 	}
 
 	@Test
@@ -33,9 +33,9 @@ class EnviromentVariablesConfigTest {
 		environmentVariables.set("ELASTIC_APM_SECRET_TOKEN", "TOKEN");
 		environmentVariables.set("ELASTIC_APM_ENVIRONMENT", "ENV");
 		
-		assertEquals(EnviromentVariablesConfig.getElasctiAMPConfing().get("service_name"),"SERVICE NAME");
-		assertEquals(EnviromentVariablesConfig.getElasctiAMPConfing().get("server_urls"),"http://localhost");
-		assertEquals(EnviromentVariablesConfig.getElasctiAMPConfing().get("secret_token"),"TOKEN");
-		assertEquals(EnviromentVariablesConfig.getElasctiAMPConfing().get("environment"),"ENV");
+		assertEquals("SERVICE NAME",EnviromentVariablesConfig.getElasctiAMPConfing().get("service_name"));
+		assertEquals("http://localhost",EnviromentVariablesConfig.getElasctiAMPConfing().get("server_urls"));
+		assertEquals("TOKEN",EnviromentVariablesConfig.getElasctiAMPConfing().get("secret_token"));
+		assertEquals("ENV",EnviromentVariablesConfig.getElasctiAMPConfing().get("environment"));
 	}
 }
