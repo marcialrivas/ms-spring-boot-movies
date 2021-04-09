@@ -33,6 +33,7 @@ jobs:
       id: docker_build
       uses: docker/build-push-action@v2
       with:
+        context: .
         push: true
         tags: mrivas/ms-spring-boot-movies:staging-${{ github.event.inputs.version }}
     - name: Image digest
