@@ -1,0 +1,9 @@
+cloud.id: ${CLOUD_ID}
+cloud.auth: ${CLOUD_AUTH}
+filebeat.inputs:
+- type: log
+  paths: logs/ms-spring-boot-movies.log.json
+  json.keys_under_root: true
+  json.overwrite_keys: true
+  json.add_error_key: true
+  json.expand_keys: true
