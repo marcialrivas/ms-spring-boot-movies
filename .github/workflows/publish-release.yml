@@ -73,7 +73,7 @@ jobs:
       with:
         context: .
         push: true
-        tags: mrivas/ms-spring-boot-movies:prod-${{ github.event.inputs.version }}
+        tags: mrivas/ms-spring-boot-movies:prod-${{ env.RELEASE_VERSION }}
     - name: Image digest
       run: echo ${{ steps.docker_build.outputs.digest }}
     - name: More testing
@@ -90,7 +90,7 @@ jobs:
       with:
         task-definition: ms-spring-boot-movies-task-definition.json
         container-name: ms-spring-boot-movies
-        image: mrivas/ms-spring-boot-movies:prod-${{ github.event.inputs.version }}
+        image: mrivas/ms-spring-boot-movies:prod-${{ env.RELEASE_VERSION }}
         aws-region: us-east-1
     - name: Deploy Amazon ECS task definition
       uses: aws-actions/amazon-ecs-deploy-task-definition@v1
