@@ -21,6 +21,7 @@
 		<sonar.host.url>https://sonarcloud.io</sonar.host.url>
 		<elastic-apm.version>1.22.0</elastic-apm.version>
 		<ecs-logging-java.version>1.0.1</ecs-logging-java.version>
+		<modelmapper.version>2.4.0</modelmapper.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -31,6 +32,11 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-mongodb</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-redis</artifactId>
 		</dependency>
 
 		<dependency>
@@ -59,13 +65,19 @@
 			<artifactId>apm-agent-attach</artifactId>
 			<version>${elastic-apm.version}</version>
 		</dependency>
-		
+
 		<dependency>
-    <groupId>co.elastic.apm</groupId>
-    <artifactId>apm-agent-api</artifactId>
-    <version>${elastic-apm.version}</version>
-</dependency>
-		
+			<groupId>org.modelmapper</groupId>
+			<artifactId>modelmapper</artifactId>
+			<version>${modelmapper.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>co.elastic.apm</groupId>
+			<artifactId>apm-agent-api</artifactId>
+			<version>${elastic-apm.version}</version>
+		</dependency>
+
 
 		<dependency>
 			<groupId>co.elastic.logging</groupId>
@@ -99,6 +111,12 @@
 						</exclude>
 						<exclude>
 							**/*com/trademehere/movies/dto/model/**
+						</exclude>
+						<exclude>
+							**/*com/trademehere/movies/dao/model/**
+						</exclude>
+						<exclude>
+							**/*com/trademehere/movies/assembler/**
 						</exclude>
 					</excludes>
 				</configuration>
