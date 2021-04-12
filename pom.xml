@@ -106,13 +106,21 @@
 				<artifactId>jacoco-maven-plugin</artifactId>
 				<version>0.8.6</version>
 				<configuration>
-					<excludes>
-						<exclude>com/trademehere/movies/MoviesApplication*</exclude>
-						<exclude>com/trademehere/movies/dto/model/*</exclude>
-						<exclude>com/trademehere/movies/dao/model/*</exclude>
-						<exclude>com/trademehere/movies/assembler/*</exclude>
-						<exclude>com/trademehere/movies/service/*</exclude>
-					</excludes>
+					<rules>
+						<rule>
+							<element>CLASS</element>
+							<excludes>
+								<exclude>com.trademehere.movies.MoviesApplication</exclude>
+							</excludes>
+							<limits>
+								<limit>
+									<counter>LINE</counter>
+									<value>COVEREDRATIO</value>
+									<minimum>80%</minimum>
+								</limit>
+							</limits>
+						</rule>
+					</rules>
 				</configuration>
 				<executions>
 					<execution>
