@@ -11,6 +11,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Data mongo-db to pom
 - DAO model Movie
+- Redis
+- Secrets with secret manager
 
 ## [1.0.1] - 2021-04-09
 
