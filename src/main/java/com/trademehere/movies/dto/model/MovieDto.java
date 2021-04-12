@@ -1,9 +1,9 @@
 package com.trademehere.movies.dto.model;
 
+import org.springframework.hateoas.RepresentationModel;
+
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
-
-import org.springframework.hateoas.RepresentationModel;
 
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -20,10 +20,10 @@ import lombok.experimental.Accessors;
 @JsonInclude(value = JsonInclude.Include.NON_NULL)
 @JsonIgnoreProperties(ignoreUnknown = true)
 @EqualsAndHashCode(callSuper=false)
-
-public class Greeting extends RepresentationModel<Greeting> {
+public class MovieDto extends RepresentationModel<MovieDto> {
 
 	private String id;
-	private String content;
-
+	private String movieId;
+	private String title;
+	
 }

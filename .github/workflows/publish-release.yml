@@ -55,6 +55,10 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        MONGODB_ENDPOINT: ${{ secrets.MONGODB_ENDPOINT }}
+        REDIS_HOST: ${{ secrets.REDIS_HOST }}
+        REDIS_PASSWORD: ${{ secrets.REDIS_PASSWORD }}
+        REDIS_PORT: ${{ secrets.REDIS_PORT }}
       run: |
         mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar
         java -jar sonar-gate-breaker-all-1.0.1.jar -u $SONAR_TOKEN

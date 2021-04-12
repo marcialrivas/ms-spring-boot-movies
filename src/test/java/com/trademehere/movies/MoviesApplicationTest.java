@@ -1,6 +1,5 @@
 package com.trademehere.movies;
 
-import com.trademehere.movies.controller.api.HelloWorldController;
 
 import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.assertThat;
@@ -8,15 +7,18 @@ import static org.assertj.core.api.Assertions.assertThat;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import com.trademehere.movies.controller.api.MovieRestController;
+
+
 @SpringBootTest
 class MoviesApplicationTest {
 
     @Autowired
-	HelloWorldController helloWorldController;
+	MovieRestController movieRestController;
 
 	@Test
 	void contextLoads() {
-        assertThat(helloWorldController).isNotNull();
+        assertThat(movieRestController).isNotNull();
 	}
 
 }

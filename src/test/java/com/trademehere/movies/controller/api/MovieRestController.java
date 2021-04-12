@@ -15,21 +15,21 @@ import org.springframework.test.web.servlet.MockMvc;
 
 @SpringBootTest
 @AutoConfigureMockMvc
-class HelloWorldControllerTest {
+class MovieRestControllerTest {
 
   @Autowired
   MockMvc mockMvc;
 
   @Test
   void shouldReturnOkResponse() throws Exception {
-    this.mockMvc.perform(get("/api/hello-world/ok")).andDo(print()).andExpect(status().isOk())
-        .andExpect(content().string(containsString("World")));
+    this.mockMvc.perform(get("/movies")).andDo(print()).andExpect(status().isOk())
+        .andExpect(content().string(containsString("id")));
   }
 
   @Test
   void shouldReturnNotFound() throws Exception {
-    this.mockMvc.perform(get("/api/hello-world/not-found")).andDo(print()).andExpect(status().isNotFound())
-        .andExpect(content().string(containsString("World")));
+    this.mockMvc.perform(get("/movies/6073468e250c2ca9450caf68")).andDo(print()).andExpect(status().isOk())
+        .andExpect(content().string(containsString("6073468e250c2ca9450caf68")));
   }
 
 }
