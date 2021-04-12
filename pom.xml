@@ -107,7 +107,11 @@
 				<version>0.8.6</version>
 				<configuration>
 					<excludes>
-						<exclude>**/*com/trademehere/movies/assembler/**</exclude>
+						<exclude>com/trademehere/movies/MoviesApplication*</exclude>
+						<exclude>com/trademehere/movies/dto/model/*</exclude>
+						<exclude>com/trademehere/movies/dao/model/*</exclude>
+						<exclude>com/trademehere/movies/assembler/*</exclude>
+						<exclude>com/trademehere/movies/service/*</exclude>
 					</excludes>
 				</configuration>
 				<executions>
