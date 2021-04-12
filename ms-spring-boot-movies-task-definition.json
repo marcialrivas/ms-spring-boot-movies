@@ -25,30 +25,34 @@
       "command": null,
       "linuxParameters": null,
       "cpu": 0,
-      "environment": [
+      "secrets": [
         {
           "name": "CLOUD_AUTH",
-          "value": "elastic:xuutq6jdae9lPbWa1oYYyI31"
+          "valueFrom": "arn:aws:secretsmanager:us-east-1:846260940530:secret:CLOUD_AUTH-NAzW9y"
         },
         {
           "name": "CLOUD_ID",
-          "value": "20210403-observability-deployment:dXMtZWFzdC0xLmF3cy5mb3VuZC5pbyRiYWI5Njc1MmUxMDI0MGI1ODY4MjM0MjQ4MTc4ZGFkMSQwNjYzN2Y2OGYyZjk0ZjVjOTE2NTQzY2QxOWZlNGQ1Yg=="
-        },
-        {
-          "name": "ELASTIC_APM_ENVIRONMENT",
-          "value": "development"
+          "valueFrom": "arn:aws:secretsmanager:us-east-1:846260940530:secret:CLOUD_ID-TenAKj"
         },
         {
           "name": "ELASTIC_APM_SECRET_TOKEN",
-          "value": "1v9Hxnp6FU4GljGiOB"
+          "valueFrom": "arn:aws:secretsmanager:us-east-1:846260940530:secret:ELASTIC_APM_SECRET_TOKEN-JTKfRf"
+        },
+        {
+          "name": "MONGODB_ENDPOINT",
+          "valueFrom": "arn:aws:secretsmanager:us-east-1:846260940530:secret:MONGODB_ENDPOINT-FB1Jyd"
         },
         {
           "name": "ELASTIC_APM_SERVERS_URL",
-          "value": "https://3b0ac9ad96f6420e8e9c43d5dde81b66.apm.us-east-1.aws.cloud.es.io:443"
+          "valueFrom": "arn:aws:secretsmanager:us-east-1:846260940530:secret:ELASTIC_APM_SERVERS_URL-eMFBZZ"
         },
         {
-          "name": "ELASTIC_APM_SERVICE_NAME",
-          "value": "ms-spring-boot-movies"
+          "name": "REDIS_HOST",
+          "valueFrom": "arn:aws:secretsmanager:us-east-1:846260940530:secret:REDIS_HOST-JG2OgY"
+        },
+        {
+          "name": "REDIS_PASSWORD",
+          "valueFrom": "arn:aws:secretsmanager:us-east-1:846260940530:secret:REDIS_PASSWORD-dNVLed"
         }
       ],
       "resourceRequirements": null,
@@ -56,7 +60,28 @@
       "dnsServers": null,
       "mountPoints": [],
       "workingDirectory": null,
-      "secrets": null,
+      "enviroment": [
+      	{
+          "name": "ELASTIC_APM_ENVIRONMENT",
+          "value": "development"
+        },
+        {
+          "name": "ELASTIC_APM_SERVICE_NAME",
+          "value": "ms-spring-boot-movies"
+        },
+        {
+          "name": "REDIS_PORT",
+          "value": "15405"
+        },
+        {
+          "name": "ELASTIC_APM_APPLICATION_PACKAGES",
+          "value": ""
+        },
+        {
+          "name": "ELASTIC_APM_ENABLE_LOG_CORRELATION",
+          "value": "true"
+        }
+      ],
       "dockerSecurityOptions": null,
       "memory": null,
       "memoryReservation": null,
