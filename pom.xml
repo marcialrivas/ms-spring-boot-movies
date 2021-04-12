@@ -107,10 +107,10 @@
 				<configuration>
 					<excludes>
 						<exclude>com/trademehere/movies/MoviesApplication*</exclude>
-						<exclude>com/trademehere/movies/dto/model/*Dto.class</exclude>
-						<exclude>com/trademehere/movies/dao/model/*Dao.class</exclude>
-						<exclude>com/trademehere/movies/assembler/*Assembler.class</exclude>
-						<exclude>com/trademehere/movies/service/*Service.classs</exclude>
+						<exclude>com/trademehere/movies/dto/model/*</exclude>
+						<exclude>com/trademehere/movies/dao/model/*</exclude>
+						<exclude>com/trademehere/movies/assembler/*</exclude>
+						<exclude>com/trademehere/movies/service/*</exclude>
 					</excludes>
 				</configuration>
 				<version>0.8.5</version>
