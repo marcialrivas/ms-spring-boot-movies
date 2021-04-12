@@ -29,35 +29,10 @@ public class MovieServiceImpl implements MovieService {
 
 	@Override
 	@CaptureSpan
-	public MovieDao findByTitle(String title) {
-		return movieRepository.findByTitle(title);
-	}
-
-	@Override
-	@CaptureSpan
-	public MovieDao findByMovieId(String movieId) {
-		return movieRepository.findByMovieId(movieId);
-	}
-
-	@Override
-	@CaptureSpan
 	@Cacheable(value = "movies", key = "#objectId")
 	public Optional<MovieDao> findByObjectId(String objectId) {
 		log.info("not from cache: "+objectId);
 		return movieRepository.findById(objectId);
-	}
-
-	@Override
-	@CaptureSpan
-	public MovieDao saveOrUpdateMovie(MovieDao movie) {
-		return movieRepository.save(movie);
-	}
-
-	@Override
-	@CaptureSpan
-	public void deleteMovie(String objectId) {
-		movieRepository.deleteById(objectId);
-
 	}
 
 }

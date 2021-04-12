@@ -38,11 +38,8 @@ public class MovieAssembler extends RepresentationModelAssemblerSupport<MovieDao
 	@Override
 	@CaptureSpan
 	public CollectionModel<MovieDto> toCollectionModel(Iterable<? extends MovieDao> entities) 
-	{
-		CollectionModel<MovieDto> movies = super.toCollectionModel(entities);
-		
-		
-		return movies;
+	{	
+		return super.toCollectionModel(entities);
 	}
 	
 
