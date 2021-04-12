@@ -7,12 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.2] - 2021-04-12
+
 #### Added
 
-- Data mongo-db to pom
-- DAO model Movie
-- Redis
-- Secrets with secret manager
+-   Data mongo-db to pom
+-   DAO model Movie
+-   Redis
+-   Secrets with secret manager
 
 ## [1.0.1] - 2021-04-09
 
@@ -22,7 +24,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 -   test-workflow
 
-[Unreleased]: https://github.com/marcialrivas/ms-spring-boot-movies/compare/1.0.1...HEAD
+[Unreleased]: https://github.com/marcialrivas/ms-spring-boot-movies/compare/1.0.2...HEAD
+
+[1.0.2]: https://github.com/marcialrivas/ms-spring-boot-movies/compare/1.0.1...1.0.2
 
 [1.0.1]: https://github.com/marcialrivas/ms-spring-boot-movies/compare/1.0.0...1.0.1
 
