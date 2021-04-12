@@ -28,31 +28,31 @@
       "secrets": [
         {
           "name": "CLOUD_AUTH",
-          "valueFrom": "arn:aws:secretsmanager:us-east-1:846260940530:secret:CLOUD_AUTH-NAzW9y"
+          "valueFrom": "arn:aws:ssm:us-east-1:846260940530:parameter/CLOUD_AUTH"
         },
         {
           "name": "CLOUD_ID",
-          "valueFrom": "arn:aws:secretsmanager:us-east-1:846260940530:secret:CLOUD_ID-TenAKj"
+          "valueFrom": "arn:aws:ssm:us-east-1:846260940530:parameter/CLOUD_ID"
         },
         {
           "name": "ELASTIC_APM_SECRET_TOKEN",
-          "valueFrom": "arn:aws:secretsmanager:us-east-1:846260940530:secret:ELASTIC_APM_SECRET_TOKEN-JTKfRf"
+          "valueFrom": "arn:aws:ssm:us-east-1:846260940530:parameter/ELASTIC_APM_SECRET_TOKEN"
         },
         {
           "name": "MONGODB_ENDPOINT",
-          "valueFrom": "arn:aws:secretsmanager:us-east-1:846260940530:secret:MONGODB_ENDPOINT-FB1Jyd"
+          "valueFrom": "arn:aws:ssm:us-east-1:846260940530:parameter/MONGODB_ENDPOINT"
         },
         {
           "name": "ELASTIC_APM_SERVERS_URL",
-          "valueFrom": "arn:aws:secretsmanager:us-east-1:846260940530:secret:ELASTIC_APM_SERVERS_URL-eMFBZZ"
+          "valueFrom": "arn:aws:ssm:us-east-1:846260940530:parameter/ELASTIC_APM_SERVERS_URL"
         },
         {
           "name": "REDIS_HOST",
-          "valueFrom": "arn:aws:secretsmanager:us-east-1:846260940530:secret:REDIS_HOST-JG2OgY"
+          "valueFrom": "arn:aws:ssm:us-east-1:846260940530:parameter/REDIS_HOST"
         },
         {
           "name": "REDIS_PASSWORD",
-          "valueFrom": "arn:aws:secretsmanager:us-east-1:846260940530:secret:REDIS_PASSWORD-dNVLed"
+          "valueFrom": "arn:aws:ssm:us-east-1:846260940530:parameter/REDIS_PASSWORD"
         }
       ],
       "resourceRequirements": null,
