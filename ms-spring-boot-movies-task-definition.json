@@ -60,7 +60,7 @@
       "dnsServers": null,
       "mountPoints": [],
       "workingDirectory": null,
-      "enviroment": [
+      "environment": [
       	{
           "name": "ELASTIC_APM_ENVIRONMENT",
           "value": "development"
