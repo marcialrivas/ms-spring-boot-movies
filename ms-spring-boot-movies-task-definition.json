@@ -43,7 +43,7 @@
           "valueFrom": "arn:aws:ssm:us-east-1:846260940530:parameter/MONGODB_ENDPOINT"
         },
         {
-          "name": "ELASTIC_APM_SERVERS_URL",
+          "name": "ELASTIC_APM_SERVER_URL",
           "valueFrom": "arn:aws:ssm:us-east-1:846260940530:parameter/ELASTIC_APM_SERVERS_URL"
         },
         {
