@@ -28,7 +28,7 @@ class MovieRestControllerTest {
 
   @Test
   void shouldReturnNotFound() throws Exception {
-    this.mockMvc.perform(get("/movies/6073468e250c2ca9450caf68")).andDo(print()).andExpect(status().isOk())
+    this.mockMvc.perform(get("/movies/1")).andDo(print()).andExpect(status().isOk())
         .andExpect(content().string(containsString("6073468e250c2ca9450caf68")));
   }
 
