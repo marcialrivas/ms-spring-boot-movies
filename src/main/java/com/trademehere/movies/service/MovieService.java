@@ -12,6 +12,6 @@ public interface MovieService {
 	
 	Page<MovieDao> findAll(Pageable pageable);
 	
-	Optional<MovieDao> findByObjectId(String objectId);
+	Optional<MovieDao> findById(Long objectId);
 	
 }

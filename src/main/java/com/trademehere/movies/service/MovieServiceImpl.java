@@ -29,10 +29,10 @@ public class MovieServiceImpl implements MovieService {
 
 	@Override
 	@CaptureSpan
-	@Cacheable(value = "movies", key = "#objectId")
-	public Optional<MovieDao> findByObjectId(String objectId) {
-		log.info("not from cache: "+objectId);
-		return movieRepository.findById(objectId);
+	@Cacheable(value = "movies", key = "#id")
+	public Optional<MovieDao> findById(Long id) {
+		log.info("not from cache: "+id);
+		return movieRepository.findById(id);
 	}
 
 }

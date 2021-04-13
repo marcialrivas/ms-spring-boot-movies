@@ -1,0 +1,33 @@
+{
+	"folders": {},
+	"connections": {
+		"mysql8-178cc76b97d-161a5cfdcda859aa": {
+			"provider": "mysql",
+			"driver": "mysql8",
+			"name": "dev_ms_movies",
+			"save-password": true,
+			"read-only": false,
+			"configuration": {
+				"host": "database-1.cluster-cf46bw3jtdm7.us-east-1.rds.amazonaws.com",
+				"port": "3306",
+				"database": "dev_ms_movies",
+				"url": "jdbc:mysql://database-1.cluster-cf46bw3jtdm7.us-east-1.rds.amazonaws.com:3306/dev_ms_movies",
+				"home": "mysql_client",
+				"type": "dev",
+				"auth-model": "native",
+				"handlers": {}
+			}
+		}
+	},
+	"connection-types": {
+		"dev": {
+			"name": "Development",
+			"color": "255,255,255",
+			"description": "Regular development database",
+			"auto-commit": true,
+			"confirm-execute": false,
+			"confirm-data-change": false,
+			"auto-close-transactions": false
+		}
+	}
+}

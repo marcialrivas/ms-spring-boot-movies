@@ -1,17 +1,11 @@
 package com.trademehere.movies.repository;
 
 
-
-import org.springframework.data.mongodb.repository.MongoRepository;
+import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.trademehere.movies.dao.model.MovieDao;
 
-import co.elastic.apm.api.CaptureSpan;
+public interface MoviesRepository extends JpaRepository<MovieDao,Long> {
 
-public interface MoviesRepository extends MongoRepository<MovieDao,String> {
-
-	@CaptureSpan
-	MovieDao findByTitle(String title);
-	@CaptureSpan
-	MovieDao findByMovieId(String movieId);
+	
 }

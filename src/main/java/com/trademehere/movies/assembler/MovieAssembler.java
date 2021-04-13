@@ -6,7 +6,6 @@ import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.hateoas.CollectionModel;
-import org.springframework.hateoas.Link;
 import org.springframework.hateoas.server.mvc.RepresentationModelAssemblerSupport;
 import org.springframework.stereotype.Component;
 
@@ -30,8 +29,10 @@ public class MovieAssembler extends RepresentationModelAssemblerSupport<MovieDao
 	@CaptureSpan
 	public MovieDto toModel(MovieDao movieDao) {
 		MovieDto movieDto = modelMapper.map(movieDao, MovieDto.class);
-		Link link = linkTo(methodOn(MovieRestController.class).findById(movieDao.getId())).withSelfRel();
-		movieDto.add(link);
+		movieDto.add(linkTo(
+				methodOn(MovieRestController.class)
+				.findById(movieDao.getId()))
+				.withSelfRel());
         return movieDto;
 	}
 	

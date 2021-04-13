@@ -4,6 +4,7 @@ package com.trademehere.movies.controller.api;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.web.PageableDefault;
 import org.springframework.data.web.PagedResourcesAssembler;
 import org.springframework.hateoas.PagedModel;
 import org.springframework.http.HttpStatus;
@@ -38,7 +39,7 @@ public class MovieRestController {
 
 	@CaptureTransaction
 	@GetMapping
-	public ResponseEntity<PagedModel<MovieDto>> getAllMovies(Pageable pageable) {
+	public ResponseEntity<PagedModel<MovieDto>> getAllMovies(@PageableDefault(value = 5, page = 0) Pageable pageable) {
 		log.info(pageable.toString());
 		Page<MovieDao> movieDaoList = movieService.findAll(pageable);
 		PagedModel<MovieDto> collModel = pagedResourcesAssembler.toModel(movieDaoList, movieAssembler);
@@ -47,12 +48,12 @@ public class MovieRestController {
 	
 	@GetMapping(value="/{id}")
 	@CaptureTransaction
-	public ResponseEntity<MovieDto> findById(@PathVariable("id") String id) {
-		log.info(id);
-		return	movieService.findByObjectId(id)
-					.map(movieAssembler::toModel)
-					.map(ResponseEntity::ok)
-					.orElse(ResponseEntity.notFound().build());
+	public ResponseEntity<MovieDto> findById(@PathVariable("id") Long id) {
+		log.info("Movie Id"+id);
+		return movieService.findById(id)
+				.map(movieAssembler::toModel)
+				.map(ResponseEntity::ok)
+				.orElse(ResponseEntity.notFound().build());
 	}
 	
 }
