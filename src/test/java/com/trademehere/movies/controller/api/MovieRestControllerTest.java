@@ -29,7 +29,7 @@ class MovieRestControllerTest {
   @Test
   void shouldReturnNotFound() throws Exception {
     this.mockMvc.perform(get("/movies/1")).andDo(print()).andExpect(status().isOk())
-        .andExpect(content().string(containsString("6073468e250c2ca9450caf68")));
+        .andExpect(content().string(containsString("title 1")));
   }
 
 }
